@@ -125,6 +125,7 @@
             width: 100%;
             height: auto;
             image-rendering: pixelated;
+            touch-action: none;
         }
         .instructions {
             position: absolute;
@@ -226,11 +227,6 @@
     });
 
     canvas.addEventListener('pointerdown', e => {
-      e.preventDefault();
-      handleInput();
-    });
-
-    canvas.addEventListener('touchstart', e => {
       e.preventDefault();
       handleInput();
     });

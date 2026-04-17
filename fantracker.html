@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Signature Basketball Shoes — Scratch</title>
-  <link rel="stylesheet" href="scratch-style.css">
+  <title>Signature Basketball Shoes — Fan Tracker</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
     body {
@@ -108,6 +107,12 @@
       text-align: center;
       color: #4a4a4a;
     }
+    .tableauPlaceholder {
+      margin-top: 2rem;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
   </style>
 </head>
 <body>
@@ -124,61 +129,9 @@
     </div>
   </header>
   <div class="container">
-    <h1>Scratch Page</h1>
-    <p>Welcome to my scratch page! Jump to a section below:</p>
-    
-    <!-- On-page anchor links -->
-    <nav style="text-align: center; margin-bottom: 30px; font-weight: bold;">
-      <a href="#lists" style="color: #2a5298; margin: 0 10px;">Lists & Rankings</a> | 
-      <a href="#media" style="color: #2a5298; margin: 0 10px;">Media Gallery</a> | 
-      <a href="#tableau" style="color: #2a5298; margin: 0 10px;">Fan Tracker Viz</a>
-    </nav>
-
-    <div class="scratch-wrapper">
-      
-      <!-- Div 1 for styling/positioning -->
-      <div id="lists" class="scratch-card">
-        <h2>My Favorite Things in Basketball</h2>
-        <!-- Ordered list with an embedded unordered list -->
-        <ol>
-          <li>Top Basketball Brands
-            <ul>
-              <li>Nike</li>
-              <li>Jordan Brand</li>
-              <li>Adidas</li>
-            </ul>
-          </li>
-          <li>Favorite Shoe Elements
-            <ul>
-              <li>Cushioning & Impact Protection</li>
-              <li>Traction & Grip</li>
-              <li>Ankle Support</li>
-            </ul>
-          </li>
-        </ol>
-      </div>
-
-      <!-- Div 2 for styling/positioning -->
-      <div id="media" class="scratch-card">
-        <h2>Media Gallery</h2>
-        <!-- Div 3 for styling/positioning -->
-        <div class="scratch-media-box">
-          <!-- Image -->
-          <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=800&auto=format&fit=crop" alt="Basketball Hoop" style="max-width: 100%; border-radius: 8px;">
-          
-          <!-- Embedded YouTube Video -->
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/n_Uly96rO-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-      </div>
-
-      <div id="tableau" class="scratch-card">
-        <h2>Interactive Fan Tracker</h2>
-        <p>Check out the most popular NBA teams by county below.</p>
-        <!-- Tableau Embed -->
-        <div class='tableauPlaceholder' id='viz1776401217948' style='position: relative'><noscript><a href='#'><img alt='Most Popular NBA Teams by County ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;X7&#47;X76BYZ2DX&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;X76BYZ2DX' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;X7&#47;X76BYZ2DX&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1776401217948');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-      </div>
-
-    </div>
+    <h1>Fan Tracker</h1>
+    <p>Check out the most popular NBA teams by county below.</p>
+    <div class='tableauPlaceholder' id='viz1776401217948' style='position: relative'><noscript><a href='#'><img alt='Most Popular NBA Teams by County ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;X7&#47;X76BYZ2DX&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;X76BYZ2DX' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;X7&#47;X76BYZ2DX&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1776401217948');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
   </div>
   <script>
     const menuButton = document.querySelector('.menu-button');

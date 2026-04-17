@@ -107,6 +107,98 @@
       text-align: center;
       color: #4a4a4a;
     }
+    .resume-header {
+      text-align: center;
+      border-bottom: 3px solid #2a5298;
+      padding-bottom: 25px;
+      margin-bottom: 35px;
+    }
+    .subtitle {
+      font-style: italic;
+      color: #4a4a4a;
+      font-size: 1.1em;
+      margin-top: 5px;
+      text-align: center;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: #2a5298;
+      border-left: 5px solid #ff6b35;
+      padding-left: 15px;
+      margin-bottom: 20px;
+      font-size: 1.5em;
+      text-transform: uppercase;
+      background: linear-gradient(to right, rgba(42, 82, 152, 0.05), transparent);
+    }
+    p.resume-text {
+      text-align: left;
+    }
+    .experience-item {
+      margin-bottom: 30px;
+    }
+    .job-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-weight: bold;
+      font-size: 1.15em;
+    }
+    .company {
+      color: #ff6b35;
+    }
+    .date {
+      color: #777;
+      font-size: 0.9em;
+      font-weight: normal;
+    }
+    .role-desc {
+      font-weight: bold;
+      color: #2a5298;
+      margin-bottom: 8px;
+      display: block;
+    }
+    ul {
+      margin-top: 5px;
+      padding-left: 20px;
+      color: #4a4a4a;
+    }
+    li {
+      margin-bottom: 7px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 15px;
+    }
+    .grid-card {
+      background: rgba(255, 255, 255, 0.7);
+      padding: 15px;
+      border-radius: 6px;
+      border-left: 4px solid #ff6b35;
+      font-size: 0.95em;
+      transition: transform 0.2s, background 0.2s;
+      color: #4a4a4a;
+    }
+    .grid-card:hover {
+      transform: translateY(-3px);
+      background: rgba(255, 255, 255, 0.95);
+    }
+    .volunteer-box {
+      background: rgba(255, 255, 255, 0.7);
+      padding: 20px;
+      border-radius: 6px;
+      border: 1px solid rgba(28,28,28,0.12);
+      font-size: 0.95em;
+      line-height: 1.8;
+      color: #4a4a4a;
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.02);
+    }
+    @media (max-width: 600px) {
+      .job-title-row { flex-direction: column; }
+      .date { margin-top: 5px; }
+    }
   </style>
 </head>
 <body>
@@ -117,14 +209,104 @@
       <nav id="page-menu" class="menu-panel" hidden>
         <a href="mainpage.html">Home</a>
         <a href="resume.html">Resume</a>
-        <a href="scratch.html">Scratch</a>
         <a href="webapp.html">Web App</a>
+        <a href="fantracker.html">Fan Tracker</a>
       </nav>
     </div>
   </header>
   <div class="container">
     <h1>Resume</h1>
-    <p>This page is a placeholder for the resume section. Use the menu button above to visit any page in the site.</p>
+    <header class="resume-header">
+        <h1>Easton Putnam</h1>
+        <div class="subtitle">Provo, UT | Bilingual: English &amp; Portuguese</div>
+    </header>
+
+    <section>
+        <h2>Academic &amp; Professional Profile</h2>
+        <p class="resume-text">A proactive professional currently focused on pursuing advanced education in Information Systems. I bring a diverse background in clinical administration, logistics, and leadership, including a 2-year full-time service mission in Natal, Brazil. I am dedicated to applying my technical aptitude and strong interpersonal skills to the field of information technology.</p>
+    </section>
+
+    <section>
+        <h2>Work Experience</h2>
+
+        <div class="experience-item">
+            <div class="job-title-row">
+                <span class="company">Aspen Grove</span>
+                <span class="date">May 2024 – April 2025</span>
+            </div>
+            <span class="role-desc">Camp Counselor &amp; Professional Intern</span>
+            <ul>
+                <li>Managed group dynamics for 10-30 participants daily, fostering a positive camp environment.</li>
+                <li>Collaborated within a professional internship class to enhance networking skills and workforce knowledge.</li>
+                <li>Facilitated logistical setups for conference guests and led large-scale recreational activities.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="job-title-row">
+                <span class="company">Trace Minerals</span>
+                <span class="date">Oct 2023 – May 2024</span>
+            </div>
+            <span class="role-desc">Order Fulfillment Specialist</span>
+            <ul>
+                <li>Managed the accuracy and fulfillment of complex online orders for warehouse distribution.</li>
+                <li>Ensured warehouse organization and safety while performing regular inventory management.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="job-title-row">
+                <span class="company">Nevada Eye Surgery</span>
+                <span class="date">Aug 2020 – Sept 2021</span>
+            </div>
+            <span class="role-desc">Administrative &amp; Clinical Assistant</span>
+            <ul>
+                <li>Digitized medical records for database integration and managed complex patient documentation.</li>
+                <li>Provided professional reception and patient check-in for a high-volume clinical practice.</li>
+                <li>Assisted clinical staff with mandatory diagnostic testing and patient preparation.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="job-title-row">
+                <span class="company">PCM Printing</span>
+                <span class="date">Sept 2019 – Mar 2020</span>
+            </div>
+            <span class="role-desc">Production Assistant</span>
+            <ul>
+                <li>Collaborated on high-volume print order fulfillment, including binding, collating, and final delivery.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Core Skills</h2>
+        <div class="grid">
+            <div class="grid-card"><strong>Bilingual:</strong> Fluent in Portuguese (Brazil)</div>
+            <div class="grid-card"><strong>Adaptability:</strong> Fast learner in new technical/manual environments</div>
+            <div class="grid-card"><strong>Collaboration:</strong> Proven team player with a happy, positive attitude</div>
+            <div class="grid-card"><strong>Interpersonal:</strong> Skilled in customer service and patient relations</div>
+            <div class="grid-card"><strong>Reliability:</strong> Goal-oriented with dedicated personal transportation</div>
+            <div class="grid-card"><strong>Operations:</strong> Experienced in warehouse &amp; logistical workflows</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Key Accomplishments</h2>
+        <div class="grid">
+            <div class="grid-card"><strong>Eagle Scout:</strong> Boy Scouts of America</div>
+            <div class="grid-card"><strong>Service:</strong> 2-Year Service (Baltimore &amp; Natal, Brazil)</div>
+            <div class="grid-card"><strong>Performing Arts:</strong> Zions Youth Symphony and Chorus Performer</div>
+            <div class="grid-card"><strong>Education:</strong> Advanced Honors High School Diploma</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Community Service</h2>
+        <div class="volunteer-box">
+            <strong>Volunteered with:</strong> Three Square, Lullaby Connection, It Takes a Village, Comprehensive Cancer, Delmar Gardens Nursing Home, Springs Preserve, and Ghana Make a Difference.
+        </div>
+    </section>
   </div>
   <script>
     const menuButton = document.querySelector('.menu-button');

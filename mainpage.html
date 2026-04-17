@@ -5,37 +5,274 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Signature Basketball Shoes</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', Arial, sans-serif;
       margin: 0;
-      padding: 40px;
-      background: #f5f5f5;
+      padding: 80px 20px 40px;
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #ff6b35 100%);
+      background-attachment: fixed;
       color: #1c1c1c;
+      min-height: 100vh;
+    }
+    .topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 24px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      background: linear-gradient(45deg, #ff6b35, #2a5298);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .menu-wrap {
+      position: relative;
+    }
+    .menu-button {
+      border: none;
+      background: linear-gradient(45deg, #ff6b35, #2a5298);
+      color: #ffffff;
+      padding: 12px 18px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .menu-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+    }
+    .menu-panel {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      margin-top: 12px;
+      width: 170px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      box-shadow: 0 14px 32px rgba(0,0,0,0.15);
+      overflow: hidden;
+    }
+    .menu-panel a {
+      display: block;
+      padding: 12px 16px;
+      color: #1c1c1c;
+      text-decoration: none;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+    .menu-panel a:hover {
+      background: linear-gradient(45deg, #ff6b35, #2a5298);
+      color: #ffffff;
     }
     .container {
       max-width: 900px;
       margin: 0 auto;
       padding: 40px;
-      background: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      border: 1px solid rgba(255, 255, 255, 0.2);
     }
     h1 {
       margin-top: 0;
       font-size: 3rem;
       letter-spacing: -0.04em;
+      background: linear-gradient(45deg, #ff6b35, #2a5298);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-align: center;
     }
     p {
       font-size: 1.1rem;
       line-height: 1.7;
       margin-top: 1.2rem;
+      text-align: center;
+      color: #4a4a4a;
+    }
+    h2 {
+      margin-top: 2rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+      text-align: center;
+      color: #2a5298;
+      font-weight: 700;
+    }
+    .brands-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 30px;
+      margin-top: 2rem;
+    }
+    .brand-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .brand-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    }
+    .brand-logo {
+      width: 100px;
+      height: 100px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+      object-fit: contain;
+      padding: 8px;
+      border: 2px solid rgba(255, 107, 53, 0.2);
+      transition: border-color 0.3s ease;
+    }
+    .brand-card:hover .brand-logo {
+      border-color: #ff6b35;
+    }
+    .brand-name {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #2a5298;
+    }
+    .brand-logo {
+      width: 100px;
+      height: 100px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+      object-fit: contain;
+      padding: 8px;
+      border: 2px solid rgba(255, 107, 53, 0.2);
+      transition: border-color 0.3s ease;
+    }
+    .brand-card:hover .brand-logo {
+      border-color: #ff6b35;
     }
   </style>
 </head>
 <body>
+  <header class="topbar">
+    <div class="brand">Signature Basketball Shoes</div>
+    <div class="menu-wrap">
+      <button class="menu-button" aria-expanded="false" aria-controls="page-menu">Menu</button>
+      <nav id="page-menu" class="menu-panel" hidden>
+        <a href="mainpage.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="scratch.html">Scratch</a>
+        <a href="webapp.html">Web App</a>
+      </nav>
+    </div>
+  </header>
   <div class="container">
     <h1>Signature Basketball Shoes</h1>
-    <p>Welcome to Signature Basketball Shoes, a showcase of the biggest signature kicks worn by NBA, WNBA, and top league stars. This site celebrates the iconic sneakers that define the game and the players who wear them.</p>
+    <p>Welcome to Signature Basketball Shoes, a showcase of the biggest signature shoes worn by NBA, WNBA, and top league stars in the 2025-26 season. This site celebrates the sneakers that define the game and the players who wear them.</p>
+    <h2>Major NBA Shoe Brands</h2>
+    <div class="brands-grid">
+      <div class="brand-card">
+        <a href="Nike.html"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nike%20logo%201978.svg" alt="Nike logo" class="brand-logo"></a>
+        <div class="brand-name">Nike</div>
+      </div>
+      <div class="brand-card">
+        <a href="JordanBrand.html"><img src="https://upload.wikimedia.org/wikipedia/en/3/37/Jumpman_logo.svg" alt="Jordan Brand Jumpman image" class="brand-logo"></a>
+        <div class="brand-name">Jordan Brand</div>
+      </div>
+      <div class="brand-card">
+        <a href="Adidas.html"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Adidas%20Logo.svg" alt="Adidas logo" class="brand-logo"></a>
+        <div class="brand-name">Adidas</div>
+      </div>
+      <div class="brand-card">
+        <a href="UnderArmour.html"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Under%20armour%20logo.svg" alt="Under Armour logo" class="brand-logo"></a>
+        <div class="brand-name">Under Armour</div>
+      </div>
+      <div class="brand-card">
+        <a href="Anta.html"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Anta%20logo.svg" alt="Anta logo" class="brand-logo"></a>
+        <div class="brand-name">Anta</div>
+      </div>
+      <div class="brand-card">
+        <a href="NewBalance.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/New_Balance_logo.svg/1280px-New_Balance_logo.svg.png" alt="New Balance logo" class="brand-logo"></a>
+        <div class="brand-name">New Balance</div>
+      </div>
+      <div class="brand-card">
+        <a href="Puma.html"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Puma-logo-%28text%29.svg" alt="Puma logo" class="brand-logo"></a>
+        <div class="brand-name">Puma</div>
+      </div>
+      <div class="brand-card">
+        <a href="Skechers.html"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Skechers.svg" alt="Skechers logo" class="brand-logo"></a>
+        <div class="brand-name">Skechers</div>
+      </div>
+      <div class="brand-card">
+        <a href="361Degrees.html"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Logo%20of%20361%CB%9A.svg" alt="361 Degrees logo" class="brand-logo"></a>
+        <div class="brand-name">361 Degrees</div>
+      </div>
+      <div class="brand-card">
+        <a href="Converse.html"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Converse%20logo.svg" alt="Converse logo" class="brand-logo"></a>
+        <div class="brand-name">Converse</div>
+      </div>
+      <div class="brand-card">
+        <a href="Rigorer.html"><img src="https://rigorer.com/cdn/shop/files/RIGORER-LOGO.jpg?v=1621921819&width=340" alt="Rigorer Austin Reaves shoe image" class="brand-logo"></a>
+        <div class="brand-name">Rigorer</div>
+      </div>
+      <div class="brand-card">
+        <a href="LiNing.html"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Li-Ning%20logo%20black.svg" alt="Li-Ning logo" class="brand-logo"></a>
+        <div class="brand-name">Li-Ning</div>
+      </div>
+      <div class="brand-card">
+        <a href="Peak.html"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Peak%20Logo.svg" alt="Peak logo" class="brand-logo"></a>
+        <div class="brand-name">Peak</div>
+      </div>
+      <div class="brand-card">
+        <a href="Reebok.html"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Reebok%202019%20logo.svg" alt="Reebok logo" class="brand-logo"></a>
+        <div class="brand-name">Reebok</div>
+      </div>
+    </div>
+
   </div>
+  <script>
+    const menuButton = document.querySelector('.menu-button');
+    const pageMenu = document.getElementById('page-menu');
+    menuButton.addEventListener('click', () => {
+      const isOpen = pageMenu.hasAttribute('hidden');
+      if (isOpen) {
+        pageMenu.removeAttribute('hidden');
+        menuButton.setAttribute('aria-expanded', 'true');
+      } else {
+        pageMenu.setAttribute('hidden', '');
+        menuButton.setAttribute('aria-expanded', 'false');
+      }
+    });
+    document.addEventListener('click', event => {
+      if (!event.target.closest('.menu-wrap')) {
+        pageMenu.setAttribute('hidden', '');
+        menuButton.setAttribute('aria-expanded', 'false');
+      }
+    });
+  </script>
 </body>
 </html>
